@@ -60,6 +60,7 @@ class BMITrackerVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
     
+    // update item and save it in db
     private func updateItem(item: BMIItem) {
         let alert = UIAlertController(title: "Update Wight", message: "Please input new Wight", preferredStyle: UIAlertController.Style.alert )
         let save = UIAlertAction(title: "Save", style: .default) { (alertAction) in
@@ -92,6 +93,7 @@ class BMITrackerVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         self.present(alert, animated:true, completion: nil)
     }
     
+//    getch bmi items from db
     func fetchBMIitems()
     {
         do{
@@ -107,7 +109,7 @@ class BMITrackerVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
     }
     
-    //update button function on press
+    // insert it to db by make the calculation of bmi by get the heigh from prev screen
     @IBAction func update(_ sender: UIButton)
     {
         do {
