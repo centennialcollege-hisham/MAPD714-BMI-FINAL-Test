@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         
     }
     
+//    set defualt value by db 
     func fillUser() {
         guard let user = self.user else { return }
         Name.text = user.name
@@ -119,6 +120,7 @@ class ViewController: UIViewController {
     }
     
     
+    // save personal data by done action in db
     @IBAction func done(_ sender: UIButton) {
         let user = User(context: self.context)
         user.name = Name.text ?? ""
